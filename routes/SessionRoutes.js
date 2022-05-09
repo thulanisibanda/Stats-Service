@@ -14,6 +14,9 @@ router.post(
     const { sessionId, totalModulesStudied, averageScore, timeStudied } =
       req.body;
     let session;
+
+    // check for sessionId, if found client is trying to update session
+    // could use request.put route to seperate the concerns
     if (sessionId) {
       session = await Session.findOneAndUpdate(
         { _id: sessionId },

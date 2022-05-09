@@ -46,6 +46,7 @@ describe("Testing all routes", () => {
     },
   ];
 
+  //tests start
   it("OK, creating a user", (done) => {
     request(app)
       .post("/newUser")
@@ -90,6 +91,7 @@ describe("Testing all routes", () => {
           expect(body).to.contain.property("averageScore");
           expect(body).to.contain.property("timeStudied");
           sessions[index].sessionId = body.sessionId;
+          // checking for last element in array, if so test is done
           if (index === sessions.length - 1) {
             done();
           }
@@ -148,6 +150,7 @@ describe("Testing all routes", () => {
           expect(body).to.contain.property("totalModulesStudied");
           expect(body).to.contain.property("averageScore");
           expect(body).to.contain.property("timeStudied");
+          // checking for last element in array, if so test is done
           if (index === sessions.length - 1) {
             done();
           }
@@ -172,6 +175,7 @@ describe("Testing all routes", () => {
           expect(totalModulesStudied).to.equal(totalModules);
           expect(averageScore).to.equal(totalScore / sessions.length);
           expect(timeStudied).to.equal(totalTime);
+          // checking for last element in array, if so test is done
           if (index === sessions.length - 1) {
             done();
           }
