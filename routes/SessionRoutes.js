@@ -1,11 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const Session = mongoose.model("Session");
+const errorHandler = require("../errorHandler");
 const router = express.Router();
-
-//error handler
-const errorHandler = (fn) => (req, res, next) =>
-  Promise.resolve(fn(req, res, next)).catch(next);
 
 //saves and updates a study session event
 router.post(

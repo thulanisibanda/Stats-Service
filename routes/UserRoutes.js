@@ -1,11 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const User = mongoose.model("User");
+const errorHandler = require("../errorHandler");
 
 const router = express.Router();
-
-const errorHandler = (fn) => (req, res, next) =>
-  Promise.resolve(fn(req, res, next)).catch(next);
 
 // create new user for testing
 router.post(

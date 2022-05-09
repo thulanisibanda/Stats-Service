@@ -2,11 +2,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const Course = mongoose.model("Course");
 const Session = mongoose.model("Session");
+const errorHandler = require("../errorHandler");
 
 const router = express.Router();
-
-const errorHandler = (fn) => (req, res, next) =>
-  Promise.resolve(fn(req, res, next)).catch(next);
 
 //creating a new course for testing
 router.post(
