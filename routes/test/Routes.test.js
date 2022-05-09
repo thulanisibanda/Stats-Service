@@ -190,7 +190,6 @@ describe("Testing all routes", () => {
       .set({ "x-user-id": userId })
       .then((res) => {
         expect(res.body).to.contain.property("error");
-        //expect(res.body).to.contain.property("error");
         done();
       })
       .catch((err) => done(err));
