@@ -27,4 +27,4 @@ Course and user creation wouuld be expanded for a real system <br>
 A User can have multiple sessions for the same course <br>
 Multiple sessions can exist with the same userId and courseId <br>
 If sessionId is passed to /courses/{courseId} then its to update the session, otherwise its to create a new session <br>
-Response variables defined in swagger file are also required. <br>
+Response variables defined in swagger file are also required in database model. <br>
