@@ -1,11 +1,12 @@
 About the project:<br>
 This is a small service thats tracks user stats for courses they study <br><br>
-It is build in nodejs and using npm as the package manager<br>
+It is build in nodejs and using npm as the package manager and mongodb as the database<br>
 Packages used are:<br>
 express: for API management<br>
 dotenv: to manage enviroment variables<br>
 supertest, mocha, chai, mockgoose: for testing<br>
 nodemon: for help with development e.g. automatic web server restarts after file changes<br>
+mongoose: to manage mongodb
 
 Getting started:<br>
 Please first install all dependences with `npm install`.<br>
